@@ -1,0 +1,204 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.5) 50%
+    ),
+    url(islamic-style-lantern-design-ramadan-celebration-with-copy-space.jpg);
+  background-position: center;
+
+  background-size: cover;
+  height: 90vh;
+}
+body::selection{
+    background-color: #ffffff3f;
+}
+.nav {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav .icon {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0px 100px 0px 30px;
+  color: #ff7200;
+}
+.nav-items ul {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;
+  align-items: center;
+  font-size: 17px;
+}
+.nav-items ul li a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-items ul li a:hover {
+  /* transition: 0.3s ease-in-out; */
+  color: #ff7200;
+}
+#search {
+  margin-left: 100px;
+  height: 35px;
+  width: 250px;
+  border: 1px solid #ff7200;
+  background-color: transparent;
+  border-radius: 7px 0px 0px 7px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+#search:focus {
+  outline: none;
+}
+#search::placeholder {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+#search:focus::placeholder {
+  color: rgb(6, 6, 6);
+}
+#srch {
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  border-radius: 0px 0px 7px 0px;
+  background-color: #ff7200;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+#srch:hover {
+  color: black;
+}
+.left-container {
+  width: 55%;
+  float: left;
+  padding: 50px 60px;
+}
+.left-container .heading {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  color: white;
+}
+.left-container .heading span {
+  font-size: 85px;
+  color: #ff7200;
+}
+.left-container .about {
+  margin: 20px 0px;
+  font-size: 16px;
+  line-height: 30px;
+  color: whitesmoke;
+}
+
+.right-container {
+  width: 45%;
+  height: 500px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-container .login {
+  width: 48%;
+  height: 410px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.right-container .login .login-here {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  margin: 10px;
+  color: #ff7200;
+}
+.right-container .login #email,
+#pass {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ff7200;
+  width: 100%;
+  margin: 18px 0px 20px 0px;
+  padding-bottom: 10px;
+  color: white;
+}
+.right-container .login #email::placeholder,
+#pass::placeholder {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+}
+.right-container .login #email:focus,
+#pass:focus {
+  outline: none;
+}
+.right-container .login #submit {
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #ff7200;
+  font: 700 17px Arial;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin: 10px 0px 20px 0px;
+}
+.right-container .login #submit:hover {
+  background-color: white;
+  color: #ff7200;
+  transition: all 0.3s;
+}
+
+.new-user {
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}
+.new-user a {
+  text-decoration: none;
+  color: #ff7200;
+  font-weight: 600;
+}
+.new-user a:hover {
+  text-decoration: underline;
+}
+.log-in-with {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.log-in-with .icons {
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.log-in-with .icons a {
+  color: white;
+}
+.log-in-with .icons a:hover {
+  color: #ff7200;
+}
+

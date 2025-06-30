@@ -1,0 +1,38 @@
+
+.left-container .joinUs{
+    width: 40%;
+    height: 40px;
+    z-index: 1;
+    border-radius: 10px;
+    color: white;
+    border: transparent;
+    background-color: #FF7200;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+     position:relative;
+    overflow: hidden;
+}
+
+.left-container .joinUs::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 120%;
+    height: 250%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.left-container .joinUs:hover::before{
+    top: -48%;
+    left: -10%;
+    transition: all 0.4s;
+}
+.left-container .joinUs:hover{
+    color:#6B3000;
+}
+

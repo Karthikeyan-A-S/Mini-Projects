@@ -1,0 +1,75 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+
+.image {
+    overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  height: 350px;
+  position: relative;
+  border-radius: 5px;
+}
+.img-slide {
+  display: flex;
+  animation: carousel 10s infinite linear;
+}
+
+.image::before,
+.image::after {
+  content: "";
+  height: 100%;
+  width: 5%;
+  z-index: 2;
+}
+.image::before {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+   background: linear-gradient(
+    to right,
+    black 30%,
+    rgb(0, 0, 0, 0)
+  );
+}
+.image::after {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background: linear-gradient(
+    to left,
+    black 30%,
+    rgb(0, 0, 0, 0)
+  );
+}
+.img-slide img {
+  height: 300px;
+  border-radius: 20px;
+  margin: 0px 20px;
+  cursor: pointer;
+  position: relative;
+}
+.image:hover .img-slide {
+  animation-play-state: paused;
+}
+.img-slide img:hover {
+  box-shadow: 0 0 20px rgba(251, 251, 2, 0.575);
+  transform: scale(1.05) translateY(-5px);
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

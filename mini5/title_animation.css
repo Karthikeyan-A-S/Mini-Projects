@@ -1,0 +1,43 @@
+.main .title {
+  z-index: 1;
+  cursor: default;
+  font-size: 80px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+   background: linear-gradient(to right, green 30% , white 50%);
+  background-size: 200% 100%;
+  background-position: right ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: blue;
+  transition: background-position 0.5s ease;
+}
+.main .title:hover {
+      background-position: left ;
+}
+.main .title::before {
+  z-index: -1;
+  content: "";
+  background: url(sailboat2.png);
+  background-size: cover;
+  right: 100%;
+  bottom: 0%;
+  width: 56px;
+  height: 80px;
+  position: absolute;
+  animation: title 10s ease-out;
+  /* animation-direction: alternate-reverse; */
+  animation-iteration-count: infinite;
+}
+@keyframes title {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -20%;
+  }
+}
+::selection {
+  color: rgb(60, 110, 227);
+}

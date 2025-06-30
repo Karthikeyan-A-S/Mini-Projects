@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../aa.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body,
+a {
+  color: aliceblue;
+}
+.nav .logo {
+  margin: 10px 0px 0px 20px;
+  height: 150px;
+  width: 150px;
+}
+.nav {
+  display: flex;
+}
+.nav_list {
+  margin-top: 50px;
+  font-size: 20px;
+}
+.list li {
+  margin: 0px 40px;
+}
+.list,
+.nav_list {
+  display: flex;
+  list-style-type: none;
+}
+.more_recipes summary {
+  list-style: none;
+}
+.more_recipes details span{
+  font-size: 10px;
+  vertical-align: middle;
+}
+.more_recipes details[open] span {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+.more_recipes details ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.more_recipes details ul li {
+  margin: 8px 0px;
+}
+
+main {
+  height: 400px;
+}
+.main,main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main .button a{
+    margin: 20px;
+}
+
+.main .button a:hover,.nav_list a:hover,.more_recipes summary:hover{
+  color: rgb(3, 20, 1);
+  text-decoration: underline 	#064273 2px;
+  text-underline-offset: 3px;
+  
+}
+
+a,summary{
+  cursor: pointer;
+  text-decoration: none;
+}
