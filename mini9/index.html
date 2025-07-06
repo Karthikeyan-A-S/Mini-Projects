@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="closesider()" class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="navbar">
+            <li onclick="opensider()" class="menubar"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            <li><a class="brandname" href="#">KKimages</a></li>
+            <li><a class="hideinmobile" href="#">Home</a></li>
+            <li><a class="hideinmobile" href="#">Blog</a></li>
+            <li><a class="hideinmobile" href="#">Products</a></li>
+            <li><a class="hideinmobile" href="#">About</a></li>
+            <li><a class="hideinmobile" href="#">Contact Us</a></li>
+            <li></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>These images are responsive</h1>
+        <div class="img-container">
+            <button onclick="closeimg()" class="close-img-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+            <div><img src="image1.jfif" alt="image"></div>
+            <div><img src="image2.jfif" alt="image"></div>
+            <div><img src="image3.jfif" alt="image"></div>
+            <div><img src="image4.jfif" alt="image"></div>
+            <div><img src="image5.jfif" alt="image"></div>
+            <div><img src="image6.jfif" alt="image"></div>
+            <div><img src="image7.jfif" alt="image"></div>
+            <div><img src="image8.jfif" alt="image"></div>
+            <div><img src="image9.jfif" alt="image"></div>
+            <div><img src="image10.jfif" alt="image"></div>
+            <div><img src="image11.jfif" alt="image"></div>
+        </div>
+        
+    </main>
+    <script>
+        let images = document.querySelectorAll('.img-container div')
+        images.forEach(
+            (img)=>{
+                img.addEventListener('click',
+                    ()=>{
+                        img.classList.add("open-img")
+                        document.querySelector(".close-img-btn").classList.add("open-close-img")
+                    }
+                )
+            }
+        )
+        function closeimg(){
+            let close_btn=document.querySelector(".open-close-img");
+            let open_img=document.querySelector(".open-img")
+            close_btn.classList.remove("open-close-img");
+            open_img.classList.remove("open-img")
+        }
+        function opensider(){
+            document.querySelector(".sidebar").style.display="flex"
+        }
+        function closesider(){
+            document.querySelector(".sidebar").style.display="none"
+        }
+
+    </script>
+</body>
+</html>
