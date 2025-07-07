@@ -311,6 +311,12 @@ nav .logo a {
   .opensearch .searchbar input {
     flex: 1;
   }
+  .signin:active,.rs-nav button:first-child:active{
+  background-color: var(--link-hover-color);
+  }
+  .signin:hover,.rs-nav button:first-child:hover{
+  background-color: white;
+}
 }
 
 /* Mobile */
@@ -318,7 +324,7 @@ nav .logo a {
   .searchbar {
     display: none;
   }
-
+  
   .searchformobile {
     display: flex;
     justify-content: center;
