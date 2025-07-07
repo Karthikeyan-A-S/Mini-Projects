@@ -5,7 +5,33 @@
   margin: 0;
   padding: 0;
 }
+body{
+  --bg-color:white;
+  --text-color:black;
+  --nav-color:#2d3030;
+  --link-color:white;
+  --search-bar-color:white;
+  --search-icon-color:rgba(0, 0, 0, 0.8);
+  --search-icon-hover-color:rgba(0,0,0,0.5);
+  --link-hover-color:rgb(81, 116, 116);
+}
+body.dark{
+  --bg-color:rgb(20, 17, 17);
+  --text-color:rgb(226, 220, 220);
+  --nav-color:#212222;
+  --link-color:white;
+  --search-bar-color:rgb(243, 236, 236);
+  --search-icon-color:rgba(0, 0, 0, 0.8);
+  --search-icon-hover-color:rgba(0,0,0,0.5);
+  --link-hover-color:rgb(136, 231, 231);
+}
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
 button {
   cursor: pointer;
   background: transparent;
@@ -14,11 +40,37 @@ button {
 }
 input{
     caret-color: blue;
+    border: none;
+    outline: none;
 }
 
-body {
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
+.about-section{
+   margin: 20px min(40px,5vw);
+}
+main h1{
+  font-size: clamp(2rem,calc(8vw + 1rem),5rem);
+  letter-spacing: 4px;
+  
+}
+
+.about-points {
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style: disc;
+  color: var(--text-color);
+}
+
+.about-points li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.dummy-content p {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 nav { 
@@ -28,7 +80,7 @@ nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #595F5F;
+  background-color: var(--nav-color);
 
 }
 
@@ -45,9 +97,11 @@ nav {
   height: 60px;
   padding: 0 30px;
 }
-
+.ls-nav a:hover{
+  color:var(--link-hover-color)
+}
 nav div a {
-  color: white;
+  color: var(--link-color);
   text-decoration: none;
   font-size: 1.3rem;
 }
@@ -68,7 +122,7 @@ nav .logo a {
 }
 
 .searchbar {
-  background-color: white;
+  background-color: var(--search-bar-color);
   height: 35px;
   border-radius: 10px;
   overflow: hidden;
@@ -76,29 +130,34 @@ nav .logo a {
 }
 
 .searchbar input {
+  background-color: var(--search-bar-color);
   width: max(250px, 18vw);
   height: 60%;
   font-size: 20px;
   color: black;
-  border: none;
-  outline: none;
   padding: 10px 15px;
   letter-spacing: 1px;
 }
 
 .searchbar label {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--search-icon-color);
   height: 100%;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  cursor: pointer;
 
+}
 .searchbar svg {
   fill: white;
 }
-
+.searchbar label:hover{
+  background-color: var(--search-icon-hover-color);
+}
+.searchbar label:active svg{
+  fill:black
+}
 [type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
@@ -142,8 +201,11 @@ nav .logo a {
   width: clamp(20px, 10vw, 40px);
   height: clamp(20px, 10vw, 40px);
   background-color: white;
+  overflow: hidden;
 }
-
+.signin:hover,.rs-nav button:first-child:hover{
+  background-color: var(--link-hover-color);
+}
 .ls-nav button:first-child {
   padding: 10px 20px;
   align-self: flex-end;
@@ -158,7 +220,15 @@ nav .logo a {
 {
   display: none;
 }
-
+.darkmode{
+  display: none;
+}
+.dark .lightmode{
+  display: none;
+}
+.dark .darkmode{
+  display: initial;
+}
 /* Tablet */
 @media (max-width: 1000px) {
   .searchbar {
